@@ -31,5 +31,6 @@ void lomuto_sort(int *array, size_t size, int left, int right);
 
 void shell_sort(int *array, size_t size);
 void counting_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
 
 #endif
