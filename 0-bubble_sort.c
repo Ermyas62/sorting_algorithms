@@ -1,19 +1,4 @@
 #include "sort.h"
-#include "stdbool.h"
-
-/**
- * swap_ints - swap tow integers in an array.
- * @a: the first integer to swap
- * @b: the second integer to swap
- */
-void swap_ints(int *a, int *b)
-{
-	int tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
 
 /**
  * bubble_sort - Sort an array of integer in ascending order
@@ -24,25 +9,22 @@ void swap_ints(int *a, int *b)
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, len = size;
-	bool bubbly = false;
+	size_t i, index, tmp = 0;
 
-	if (array == NULL || size < 2)
+	if (size < 2)
 		return;
 
-	while (bubbly == false)
-	{
-		bubbly = true;
-		for (i = 0; i < len - 1; i++)
+	for (i = 0; i < size; i++)
+		for (index = 0; index < size; index++)
 		{
-			if (array[i] > array[i + 1])
+			if (array[index] > array[index + 1])
 			{
-				swap_ints(array + i, array + i + 1);
-				print_array(array, size);
-				bubbly = false;
+			tmp = array[index];
+			array[index] = array[index + 1];
+			array[index + 1] = tmp;
+			print_array(array, size);
 			}
 		}
-		len--;
-	}
+
 }
 
