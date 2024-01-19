@@ -5,7 +5,6 @@
  * @a: the first integer to swap
  * @b: the second integer to swap
  */
-
 void swap_ints(int *a, int *b)
 {
 	int tmp;
@@ -24,7 +23,6 @@ void swap_ints(int *a, int *b)
  *
  * Return: the final partion index
  */
-
 int lomuto_partition(int *array, size_t size, int left, int right)
 {
 	int *pivot, above, below;
