@@ -1,9 +1,11 @@
 #include "sort.h"
 
 /**
- * swap_int - Swap tow integers in an array.
+ * swap_ints - Swap two integers in an array using selection method.
  * @a: the first integer to swap
  * @b: the second integer to swap
+ *
+ * Description: swap integers
  */
 void swap_ints(int *a, int *b)
 {
